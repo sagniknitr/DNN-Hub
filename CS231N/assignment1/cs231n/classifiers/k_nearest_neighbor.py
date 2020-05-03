@@ -134,7 +134,7 @@ class KNearestNeighbor(object):
          
         # for ith element sqrt( sum( (ai-bi)**2 ) -> sqrt( sum( ai**2 + bi**2 - 2*ai*bi)) - rearrange sum to broadcast
 
-        dists = np.sqrt(np.sum(X**2,axis=1).reshape(num_test,1) + np.sum(self.X_train**2,axis=1) - X.dot(self.X_train.T)*2)
+        dists = np.sqrt(np.sum(X**2,axis=1).reshape(num_test,1) + np.sum(self.X_train**2,axis=1) - 2 * np.dot(X, self.X_train.T))
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
