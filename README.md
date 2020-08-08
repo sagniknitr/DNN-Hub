@@ -3,7 +3,9 @@ Understanding and experimenting with Neural networks for computer vision based a
 
 Below are the plans for this repo : 
 
-- [ ] Complete CS231n course
-- [ ] More details on back propagation.
-- [ ] Understand mobilenet and segnet.
-- [ ] Efficient Neuran network architecture on hardware.(GPU/DSP)
+- [X] Complete Stanford CS231n course
+- [X] More details on back propagation.
+- [ ] Complete Coursera Deep Learning Specialization.
+- [X] Understand mobilenet and Inception V3.
+- [ ] Efficient Neural network architectures on hardware.(GPU/DSP)
+- [ ] Hourglass network for human pose estimation.
