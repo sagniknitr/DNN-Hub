@@ -28,12 +28,12 @@
 - Use of scale augmentation to boost performance
 ##### 1.2.2 Hyperparameters
 
+- Learing Rate = 0.1 decreased by a factor 10 every 20 epochs
+- Epochs = 80
 - Depth = 20
 - Batch Size = 64
+- Weight Initialization = Group normalization
+- Activation = ReLU / Parametric ReLU
+- Training Dataset = Berkely segmentation dataset
 - Momentum = 0.9
 - Weight Decay = 0.0001
-- Weight Initialization = kaiming normalization
-- Activations = ReLU
-- Epochs = 80
-- Learing Rate = 0.1 decreased by a factor 10 every 20 epochs
-- Training Dataset = Berkely segmentation dataset
