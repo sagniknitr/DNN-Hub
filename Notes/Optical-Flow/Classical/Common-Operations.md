@@ -1,27 +1,29 @@
 
 ## Common Assumptions
-Th e basic idea of the LK algorithm rests on three assumptions.
-1. Brightness constancy. A pixel from the image of an object in the scene does not
+- The basic idea of the Optical Flow algorithm rests on three assumptions.
+  1. Brightness constancy. A pixel from the image of an object in the scene does not
 change in appearance as it (possibly) moves from frame to frame. For grayscale images
 (LK can also be done in color), this means we assume that the brightness of a
 pixel does not change as it is tracked from frame to frame.
 
-2. Temporal persistence or “small movements”. Th e image motion of a surface patch
+  2. Temporal persistence or “small movements”. Th e image motion of a surface patch
 changes slowly in time. In practice, this means the temporal increments are fast
 enough relative to the scale of motion in the image that the object does not move
 much from frame to frame.
 
-3. Spatial coherence. Neighboring points in a scene belong to the same surface, have
+  3. Spatial coherence. Neighboring points in a scene belong to the same surface, have
 similar motion, and project to nearby points on the image plane.
+
+- There may be additional constraints imposed on algorithm, like variatiiobal refinement etc.
 
 ## Derivatives
 ![](resources/common4.png)
 
 
-### Scharr Derivatives
+#### Scharr Derivatives
 ![](resources/common3.png)
 
-### Sobel Derivatives
+#### Sobel Derivatives
 ![](resources/common5.png)
 
 ## Hyperparameters
@@ -30,14 +32,24 @@ similar motion, and project to nearby points on the image plane.
 ![](resources/common2.png)
 
 ## Hessian Matrix
+- Below is the Hessian matrix of a 2D signal of 2D image
 ![](resources/common1.png)
+
+- Generally the single derivative of a image is calculated by using the Sobel . These derivatives are multiplied togather.
+  ```python
+     
+  ```
 
 ## Linear Algebra (Eigenvalue, Matrix decomposition)
 
 ## Border cases (padding, tiling etc)
 
+- For determining optical flow outside the integration window, we have to design the algorithm such that it takes valid pixels at the appropriate 
+iteration.Otherwise accuracy may be lost.
 
-
+## Float vs Fixed 
+- Accuracy and Speed tradoff plays an important role in chossing fixed point integers over floating point.
+- The final optical flow vector are generally floating point.
 
 #### References 
 
