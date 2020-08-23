@@ -27,6 +27,11 @@
 
 #### 2.2 Example CNN - DeepLabV3
 
+## 3. Nearest- Neighbour
+
+- Easy to use, but not so good resuts.
+
+![](resources/interpolation.JPG)
 
 ## 3.Trilinear Interpolation
 ![](resources/interpolation5.png)
