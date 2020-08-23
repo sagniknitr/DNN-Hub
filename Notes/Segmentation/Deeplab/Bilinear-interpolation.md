@@ -16,6 +16,7 @@
 - If output size aligns well to input size, we can replace this by transposed convouilution.
   
 ![](resources/interpolation4.png)
+![](resources/interpolation2.JPG)
 
 #### 2.1 For non-rectangular connection
 - We use warping
