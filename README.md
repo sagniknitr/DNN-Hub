@@ -1,5 +1,5 @@
 # DNN-Hub
-Understanding and experimenting with Neural networks for computer vision based advanced driving systems.
+Understanding and experimenting with Neural networks for computer vision based advanced driving systems and multimedia solutions.
 
 Below are the plans for this repo : 
 
@@ -8,4 +8,5 @@ Below are the plans for this repo :
 - [ ] Complete Coursera Deep Learning Specialization.
 - [X] Understand mobilenet and Inception V3.
 - [ ] Efficient Neural network architectures on hardware.(GPU/DSP)
+- [x] Optical Flow solutions
 - [ ] Hourglass network for human pose estimation.
