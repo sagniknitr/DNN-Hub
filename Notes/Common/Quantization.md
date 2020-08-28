@@ -11,11 +11,20 @@
 ### Types
 #### 1. Affine/Assymetric Quantization
 - The zero point is variable.
+  
+![](resources/quant4.JPG)
+
+- Let us see an example for Multiply accumalate 1D convolution operation : 
+![](resources/quant5.JPG)
+
 #### 2. Symmetric quantization
 - The zero point is fixed at 0.
+![](resources/quant6.JPG)
 #### 3. Stochastic quantization
 - Adds a normal distribution noise to the float input before scaling and rounding.
-- 
+![](resources/quant7.JPG)
+
+- For dequantization operation, we just multiply the Quantized value with scaling factor.
 ### Quantization aware training
 
 In QAT, as opposed to computing scale factors to activation tensors after the DNN is trained, the quantization error is considered when training the model. The training graph is modified to simulate the lower precision behavior in the forward pass of the training process. This introduces the quantization errors as part of the training loss, which the optimizer tries to minimize during the training. Thus, QAT helps in modeling the quantization errors during training and mitigates its effects on the accuracy of the model at deployment.
