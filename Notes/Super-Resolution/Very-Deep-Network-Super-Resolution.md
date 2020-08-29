@@ -7,13 +7,13 @@
 ### 1.1 SRCNN
 - SRCNN is a prominent method.
 - It has three layers  
-- Patch Extraction layer and representation (9x9)
-- Non linear mapping (1x1)
-- Reconstruction (5x5)
+    - Patch Extraction layer and representation (9x9)
+    - Non linear mapping (1x1)
+    - Reconstruction (5x5)
 
 ![](resources/vdsr1.png)
 
-### 1.2 
+### 1.2 VDSR
 
 - In this approach a pair of layers (CNN and nonlinear) is cascaded repeatedly
 - An interpolated low resoultion (ILR) goes through layers and transforms into a high resolution image.
@@ -22,6 +22,7 @@
 - ReLU is the most common non-linear unit used.
 
 #### 1.2.1 Features
+- Very deep network (20) and large receptive fields (41 x 41)
 - Loss functions
 - SRCNN has a very small learning rate. Setting high learning rates lead to vanishing gradients.Adjustable gradient clipping is solution (i.e. clip gradients to [-theta/gamma, theta/gamma] where gamma is the learning rate)
   
@@ -37,3 +38,7 @@
 - Training Dataset = Berkely segmentation dataset
 - Momentum = 0.9
 - Weight Decay = 0.0001
+
+##### 1.2.3 Comparision
+
+![](resources/vdsr1.JPG)
