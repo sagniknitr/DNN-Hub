@@ -289,8 +289,7 @@ model = LyftModel(cfg).to(device)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 criterion = nn.MSELoss(reduction="none")
 Downloading: "https://download.pytorch.org/models/resnet18-5c106cde.pth" to /root/.cache/torch/checkpoints/resnet18-5c106cde.pth
-100%
-44.7M/44.7M [00:13<00:00, 3.45MB/s]
+
 #TRAIN LOOP
 tr_it = iter(train_dataloader)
 progress_bar = tqdm(range(cfg['train_params']['max_num_steps']))
