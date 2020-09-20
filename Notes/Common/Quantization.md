@@ -58,3 +58,22 @@ Not all activation layer types are friendly to quantization. For example, networ
     # with FakeQuantization nodes and fold batchnorm for eval.
     tf.contrib.quantize.create_eval_graph()
     ```
+
+
+### Pytorch vs Tensorflow Lite Quantization
+
+#### Pytorch
+- Uses two projects in backend
+    - FBGEMM
+    - ARM QNNPACK
+-  Has limited data manipulation support
+-  Observers - use input statistics to compute quantization parameters.
+
+
+
+#### Tensorflow Lite (v2.2)
+- Supports 
+    - Post training float16 quantization
+    - Post training dynamic quantization
+    - Post training integer quantization
+    - Quantization aware training
