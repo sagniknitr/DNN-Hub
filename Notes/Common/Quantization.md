@@ -68,12 +68,23 @@ Not all activation layer types are friendly to quantization. For example, networ
     - ARM QNNPACK
 -  Has limited data manipulation support
 -  Observers - use input statistics to compute quantization parameters.
+    - MinMaxObserver/ Perchannel MinMax observer (symmetric; only u/int8)
+    - MovingAverageMinMax Observer/ PerChannelMovingAverageMinMax observer (asymmetric)
+    - HistogramObserver.
 
 
 
 #### Tensorflow Lite (v2.2)
 - Supports 
     - Post training float16 quantization
+        - Reduces model size by 2x
     - Post training dynamic quantization
+        - Weights are converted to 8 bit
+        - Activations are generally floating for precision. 
     - Post training integer quantization
+        - Converts 32 bit floating to nearest fixed point
+        - Supports 1) full integers 2) integer with float fallback
+        - Supports optimized integer only registers
+        - Both weights and activations are 8 bit 
     - Quantization aware training
+-  Tensorflow prefers int8 (ie signed integers) over unsigned.
