@@ -10,3 +10,10 @@ Below are the plans for this repo :
 - [ ] Efficient Neural network architectures on hardware.(GPU/DSP)
 - [x] Optical Flow solutions
 - [ ] Hourglass network for human pose estimation.
+
+
+
+# Notes
+
+I have written down important [concepts](./Notes/) related to applied Deep Learning and Computer Vision in various Multimedia and ADAS applications
+
