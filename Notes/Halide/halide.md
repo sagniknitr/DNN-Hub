@@ -90,7 +90,6 @@ func blur_3x3(func in) {
 ## Examples
 
 [1. Basic-Syntax](./resources/basic.cpp)  
-
 [2. Debugging](./resources/basic.cpp)  
 [3. Optimizations](./resources/basic.cpp)  
 [4. Pipelining](./resources/basic.cpp)  
@@ -101,6 +100,6 @@ func blur_3x3(func in) {
 
 ### Reference
 
-[1] Extending halide to improve software development for imaging DSPs, Vocke, S.
-[2] [Halide Lang](https://halide-lang.org/index.html#gettingstarted)
+[1] Extending halide to improve software development for imaging DSPs, Vocke, S.  
+[2] [Halide Lang](https://halide-lang.org/index.html#gettingstarted)  
  
