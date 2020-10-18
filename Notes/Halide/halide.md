@@ -89,12 +89,13 @@ func blur_3x3(func in) {
 
 ## Examples
 
-[1. Basic-Syntax](./resources/basic.cpp)
-[2. Debugging](./resources/basic.cpp)
-[3. Optimizations](./resources/basic.cpp)
-[4. Pipelining](./resources/basic.cpp)
-[5. Compilation](./resources/basic.cpp)
-[6. Halide System](./resources/basic.cpp)
+[1. Basic-Syntax](./resources/basic.cpp)  
+
+[2. Debugging](./resources/basic.cpp)  
+[3. Optimizations](./resources/basic.cpp)  
+[4. Pipelining](./resources/basic.cpp)  
+[5. Compilation](./resources/basic.cpp)  
+[6. Halide System](./resources/basic.cpp)  
 
 
 
