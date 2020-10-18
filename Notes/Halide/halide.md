@@ -51,7 +51,7 @@ func blur_3x3(func in) {
 - Algorithm specifies the computatuom
 - it is platform independent
 - Below are some Halide classes  for expressing algorithms :
-   - Funkc : pure functions define over integer domain.
+   - Func : pure functions define over integer domain.
    - Expr  : Algebraic expression of Halide Funcs.
    - Var   : Abstract variable representing the domain.
    - Buffer, Image : represents the input, output anf in/out buffers
@@ -101,5 +101,5 @@ func blur_3x3(func in) {
 ### Reference
 
 [1] Extending halide to improve software development for imaging DSPs, Vocke, S.
-
+[2] [Halide Lang](https://halide-lang.org/index.html#gettingstarted)
  
