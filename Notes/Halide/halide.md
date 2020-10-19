@@ -1,33 +1,33 @@
 ## Introduction
 
 ###### Why Halide
-- Developing optimized image processing kernel is difficult
-- We can optmiize say a sobel filter 11 times faster than a CPU implelementation
-- However, hand crafting sucj optimiztion can tie to that one particualr platform only
-- Diifucult totm aintain large number of such kernels
-- Halide is the solutuion
+- Developing an optimized image processing kernel is difficult
+- We can optimize say a Sobel filter 11 times faster than a CPU implementation
+- However, handcrafting such optimization can tie to that one particular platform only
+- Difficult to maintain a large number of such kernels
+- Halide is the solution
 
 ###### What is Halide
 - Halide [Ragan-Kelley et al. 2013] is a domain-specific language (DSL) and compiler for
 image processing. It radically reduces the effort spent on development and optimization by
 using an abstract, functional programming style, while decoupling the description of the
-algorithm from that of the execution strategy 
-- Based on C++ operator overloading anfd equopped with a JIT compiler
-- Supported architecutre : 
+an algorithm from that of the execution strategy 
+- Based on C++ operator overloading and equipped with a JIT compiler
+- Supported architecture : 
    - x86, ARM, MIPS, Hexagon, PowerPC
 - Supported OS :
-   - Linux, Windows, macOS, Android , ioS, Qualcomm QuRT
+   - Linux, Windows, macOS, Android, ioS, Qualcomm QuRT
 - Supported GPU Compute APIs :
    - OpenCL, OpenGL, CUDA, Apple Metal, MS Direct X12
   
 ###### Halide architecture
-- Halide supports seperation of algortihms and a schedule :
-   - Algorithm represemnts computauton kernel , which the main loop.
-   - Schedule represents the main computatiuon and its organization, parallelism and locality of data.
-- Example : Gaussian Filtering
-   - CPU kerenl has 300 lines of code
-   - Adobe : 1500 lines, lots of engineering hours, 10x faster.Has multicore, vectorization support
-   - Halide : 60 lines, less engineering hours (2-3 days), 15x faster
+- Halide supports the separation of algorithms and a schedule :
+   - The algorithm represents the computation kernel, which the main loop.
+   - Schedule represents the main computation and its organization, parallelism, and locality of data.
+- Example: Gaussian Filtering
+   - CPU kernel has 300 lines of code
+   - Adobe: 1500 lines, lots of engineering hours, 10x faster. Has multicore, vectorization support
+   - Halide: 60 lines, less engineering hours (2-3 days), 15x faster
 
 
 ```C++
@@ -48,18 +48,18 @@ func blur_3x3(func in) {
 
 ## Halide Algorithm
 
-- Algorithm specifies the computatuom
-- it is platform independent
+- Algorithm specifies the computation
+- it is platform-independent
 - Below are some Halide classes  for expressing algorithms :
-   - Func : pure functions define over integer domain.
-   - Expr  : Algebraic expression of Halide Funcs.
-   - Var   : Abstract variable representing the domain.
-   - Buffer, Image : represents the input, output anf in/out buffers
-   - RDom : explicit psecification for recuction domains.
+   - Func: pure functions define over integer domain.
+   - Expr: Algebraic expression of Halide Funcs.
+   - Var: Abstract variable representing the domain.
+   - Buffer, Image: represents the input, output and in/out buffers
+   - RDom: explicit specification for reduction domains.
 - Funcs are the main objects in Halide :
-   - Hold computation kerenels ( fx - core loop body )
-   - Can be assigned to any execution taget ( CPU, GPU, DSP)
-   - JIT compiled and executed or AOT compiled to file.
+   - Hold computation kernels ( fx - core loop body )
+   - Can be assigned to any execution target ( CPU, GPU, DSP)
+   - JIT-compiled and executed or AOT compiled to file.
 
 
 
