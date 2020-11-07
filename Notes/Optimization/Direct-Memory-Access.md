@@ -27,7 +27,32 @@
    - Cache line size may not be a good match for data size
 
 ### DMA transfer modes
+DMA performs data transfer operation. The different DMA transfer modes are as follows:-
 
+1) Burst or block transfer DMA
+
+2) Cycle steal or single byte transfer DMA.
+
+3) Transparent or hidden DMA.
+
+1) Burst or block transfer DMA
+
+It is the fastest DMA mode. In this two or more data bytes are transferred continuously.
+Processor is disconnected from system bus during DMA transfer. N number of machine cycles are adopted into the machine cycles of the processor where N is the number of bytes to be transferred.
+DMA sends HOLD signal to processor to request for system bus and waits for HLDA signal.
+After receiving HLDA signal, DMA gains control of system bus and transfers one byte. After transferring one byte, it increments memory address, decrements counter and transfers next byte.
+In this way, it transfer all data bytes between memory and I/O devices. After transferring all data bytes, the DMA controller disables HOLD signal & enters into slave mode.
+2) Cycle steal or single byte transfer DMA.
+
+In this mode only one byte is transferred at a time. This is slower than burst DMA.
+DMA sends HOLD signal to processor and waits for HLDA signal on receiving HLDA signal, it gains control of system bus and executes only one DMA cycle.
+After transfer one byte, it disables HOLD signal and enters into slave mode.
+Processor gains control of system bus and executes next machine cycle. If count is not zero and data is available then the DMA controller sends HOLD signal to the processor and transfer next byte of data block.
+3) Transparent or Hidden DMA transfer
+
+Processor executes some states during which is floats the address and data buses. During this process, processor is isolated from the system bus.
+DMA transfers data between memory and I/O devices during these states. This operation is transparent to the processor.
+This is slowest DMA transfer. In this mode, the instruction execution speed of processor is not reduced. But, the transparent DMA requires logic to detect the states when the processor is floating the buses.
 ######
 ######
 ######
