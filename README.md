@@ -8,7 +8,6 @@ Below are the plans for this repo :
 - [ ] Complete Coursera Deep Learning Specialization.
 - [X] Understand mobilenet and Inception V3.
 - [ ] Efficient Neural network architectures on hardware.(GPU/DSP)
-- [x] Optical Flow solutions
 - [ ] Hourglass network for human pose estimation.
 
 
@@ -16,4 +15,3 @@ Below are the plans for this repo :
 # Notes
 
 I have written down important [concepts](./Notes/) related to applied Deep Learning and Computer Vision in various Multimedia and ADAS applications
-
